@@ -1,4 +1,6 @@
-import {useNavigate} from 'react-router-dom'
+import './Login.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login(props) {
     const navigate = useNavigate(); //Initilizing Use Navigate
@@ -14,27 +16,36 @@ function Login(props) {
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
         }
-        let response = await fetch(backend_url, options); 
+        let response = await fetch(backend_url, options);
         let responseData = await response.json();
-        if(responseData.flag === true){
+        if (responseData.flag === true) {
             navigate('/restaurant');
         }
-        else{
+        else {
             alert(responseData.msg);
         }
     }
     return (
-        <div>
-            <h1>Login Form</h1>
-            <form onSubmit={handleSubmit}>
-                Username: <input type="text" name="username" id="username" /><br />
-                Password: <input type="password" name="password" id="password" /><br />
-                <input type="submit" value="login" />
-            </form>
+        <div className='pri'>
+            <div className='content'>
+                <h1>Login</h1>
+                <form onSubmit={handleSubmit}>
+                    <div className='container'>
+                        <label htmlFor="username"><b>Username</b></label>
+                        <input type="text" name="username" id="username" required />
+
+                        <label htmlFor="password"><b>Password</b></label>
+                        <input type="password" name="password" id="password" required />
+                        
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
 export default Login;
+
 
 
 
