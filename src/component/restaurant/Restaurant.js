@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Copyright from '../copyright/Copyright';
 import './Restaurant.css'
 
 function Restaurant(props) {
@@ -71,6 +72,7 @@ function Restaurant(props) {
                         : (<h2>Loading</h2>)
                 }
             </div>
+            <Copyright />
         </div>
     );
 }

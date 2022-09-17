@@ -7,7 +7,7 @@ export default function NavigationBar(props) {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand>Restaurant App</Navbar.Brand>
+                <Navbar.Brand>Balraj's Kitchen</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Login</Nav.Link>
                     <Nav.Link href="/restaurant">Restaurant</Nav.Link>

@@ -1,5 +1,6 @@
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
+import Copyright from '../copyright/Copyright';
 
 
 function Login(props) {
@@ -41,6 +42,7 @@ function Login(props) {
                     </div>
                 </form>
             </div>
+            <Copyright/>
         </div>
     );
 }
